@@ -22,10 +22,10 @@ pipeline {
 
         stage('deployment') {
             steps {
-                deploy adapters: [tomcat9(url: 'http://192.168.1.49:8082/manager/html', 
+                deploy adapters: [tomcat9(url: 'http://192.168.1.49:8082/manager/', 
                     credentialsId: 'tomcatCreds')], 
                     war: 'target/*.war', 
-                    contextPath: 'app'
+                    contextPath: 'aastha'
             }
         }
 
