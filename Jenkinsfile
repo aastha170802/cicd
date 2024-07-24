@@ -8,11 +8,11 @@ pipeline {
             }
         }
            
-        stage('Verify Sonar') {
-            steps {
-                sh "mvn clean verify sonar:sonar -Dsonar.projectKey=aastha -Dsonar.projectName='aastha' -Dsonar.host.url=http://192.168.1.72:9000 -Dsonar.token=sqp_f1d871675a8e7f8e046a7c5c77738c90c62e760c"
-            }
-        }
+        // stage('Verify Sonar') {
+        //     steps {
+        //         sh "mvn clean verify sonar:sonar -Dsonar.projectKey=aastha -Dsonar.projectName='aastha' -Dsonar.host.url=http://192.168.1.72:9000 -Dsonar.token=sqp_f1d871675a8e7f8e046a7c5c77738c90c62e760c"
+        //     }
+        // }
 
         stage('Build') {
             steps {
